@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>국가보훈부 디지털 홍보관 - 일상 속 살아있는 보훈, 모두의 보훈</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 상단 네비게이션 헤더 -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="brand-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <!-- 대한민국 정부 공식 상징 태극 회오리 문양 (SVG 규격) -->
+        <div class="logo-symbol-gok">
+          <svg class="gok-symbol-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- 정부적색 상단 태극 곡선 -->
+            <path d="M50 8C65 8 82 18 88 32C94 46 89 62 78 72C66 60 62 48 57 39C50 28 38 21 24 22C31 13 40 8 50 8Z" fill="#E4032E"/>
+            <!-- 정부청색 하단 태극 곡선 -->
+            <path d="M50 92C35 92 18 82 12 68C6 54 11 38 22 28C34 40 38 52 43 61C50 72 62 79 76 78C69 87 60 92 50 92Z" fill="#003764"/>
+            <!-- 중앙 백색 회전 여백 -->
+            <circle cx="50" cy="50" r="9" fill="#FFFFFF"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="kr-title">대한민국 <strong>국가보훈부</strong></span>
+          <span class="en-subtitle">Ministry of Patriots and Veterans Affairs</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#about" class="nav-link">보훈부 소개</a>
+        <a href="#tasks" class="nav-link">주요 업무</a>
+        <a href="#checker" class="nav-link highlight-nav">✨ 맞춤 혜택 진단</a>
+        <a href="#trends" class="nav-link">정책 동향</a>
+        <a href="#news" class="nav-link">최신 뉴스</a>
+        <a href="#faq" class="nav-link">쉬운 보훈 Q&A</a>
+        <a href="#services" class="nav-link cta-btn">보훈 서비스 바로가기</a>
+      </nav>
+
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 모바일 사이드 메뉴 -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <span class="drawer-title">국가보훈부 바로가기</span>
+      <button class="close-drawer" id="closeDrawer">&times;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="#about" class="drawer-link">보훈부 소개</a>
+      <a href="#tasks" class="drawer-link">주요 업무</a>
+      <a href="#checker" class="drawer-link highlight-drawer">✨ 맞춤 혜택 진단 체크리스트</a>
+      <a href="#trends" class="drawer-link">정책 동향</a>
+      <a href="#news" class="drawer-link">최신 뉴스</a>
+      <a href="#faq" class="drawer-link">쉬운 보훈 Q&A</a>
+      <a href="#services" class="drawer-link">주요 대민서비스</a>
+    </div>
+  </div>
+
+  <!-- 메인 히어로 섹션 -->
+  <section class="hero-section">
+    <div class="hero-background-shapes">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="hero-grid-pattern"></div>
+    </div>
+    
+    <div class="hero-container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span> 국가를 위한 헌신을 잊지 않는 나라
+      </div>
+      <h1 class="hero-title">
+        일상 속 살아있는 보훈,<br>
+        자랑스러운 <span>‘모두의 보훈’</span>
+      </h1>
+      <p class="hero-desc">
+        국가보훈부는 국가를 위해 희생하고 공헌하신 분들을 끝까지 책임지고 기억하며,<br>
+        자유민주주의 대한민국의 숭고한 보훈 가치를 미래세대로 계승해 나갑니다.
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-num" id="stat-heroes">84만+</div>
+          <div class="stat-label">국가유공자 및 유가족 예우</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">2023. 6. 5</div>
+          <div class="stat-label">‘부(部)’ 정식 승격 출범</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">6조 4천억+</div>
+          <div class="stat-label">보훈 복지·보상 재정 투자</div>
+        </div>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="#checker" class="btn btn-primary">🔍 내 맞춤 보훈 혜택 진단하기</a>
+        <a href="#tasks" class="btn btn-secondary">핵심 업무 알아보기</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 국가보훈부 소개 섹션 -->
+  <section class="section about-section" id="about">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="sub-heading">KOREA MPVA INTRODUCTION</span>
+        <h2 class="main-heading">국가보훈부는 어떤 곳인가요?</h2>
+        <p class="section-intro">
+          ‘국가보훈처’에서 2023년 6월 5일, 62년 만에 당당한 국무위원 부처인 <strong>‘국가보훈부’</strong>로 승격되었습니다.<br>
+          국가를 위한 헌신이 최고의 가치로 존중받는 품격 높은 대한민국을 만듭니다.
+        </p>
+      </div>
+
+      <div class="intro-grid">
+        <div class="intro-card primary-card">
+          <div class="card-icon">🏛️</div>
+          <h3>‘부(部)’ 승격의 진정한 의미</h3>
+          <p>
+            과거 ‘처’ 체계의 한계를 극복하고 장관이 국무회의 심의·의결권을 온전히 행사하여,
+            국가유공자 예우 정책과 보훈 보상 체계를 한 단계 높은 국가적 종합 복지 시스템으로 격상시켰습니다.
+          </p>
+          <ul class="bullet-list">
+            <li>국무위원으로서 주도적 보훈정책 수립 및 국무회의 발언권 확대</li>
+            <li>국토수호·재난구조 희생자(군·경·소방) 통합 안전망 마련</li>
+            <li>글로벌 유엔 참전국과의 국제 보훈외교 역량 강화</li>
+          </ul>
+        </div>
+
+        <div class="intro-card">
+          <div class="card-icon">🎯</div>
+          <h3>3대 핵심 슬로건 & 가치</h3>
+          <div class="value-item">
+            <span class="value-tag red">모두의 보훈</span>
+            <p>국민 모두가 유공자에게 감사하며 함께 참여하고 누리는 열린 보훈 문화</p>
+          </div>
+          <div class="value-item">
+            <span class="value-tag blue">일상의 보훈</span>
+            <p>기념일에만 찾는 것이 아니라 학교, 일터, 골목길에서 매일 체감하는 예우</p>
+          </div>
+          <div class="value-item">
+            <span class="value-tag dark">통합의 보훈</span>
+            <p>독립·호국·민주로 이어지는 역사의 숭고한 유산을 국민 대통합의 원동력으로 승화</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 주요 업무 섹션 (국민 눈높이 해설) -->
+  <section class="section tasks-section" id="tasks">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="sub-heading">KEY MISSIONS</span>
+        <h2 class="main-heading">국민을 위해 보훈부가 하는 4대 주요 업무</h2>
+        <p class="section-intro">보훈부는 유공자와 그 가족의 삶을 전 생애주기에 걸쳐 든든하게 받쳐줍니다.</p>
+      </div>
+
+      <div class="tasks-grid">
+        <!-- 1. 보상 및 예우 -->
+        <div class="task-card">
+          <div class="task-header">
+            <div class="task-icon-circle bg-blue">🎖️</div>
+            <div>
+              <h3>국가유공자 등록 & 합당한 보상</h3>
+              <span class="task-category">생계 안정 및 예우</span>
+            </div>
+          </div>
+          <p class="task-body">
+            독립유공자, 참전용사, 특수임무유공자, 전몰·순직 군경 및 소방관 등 희생과 헌신에 걸맞은 
+            <strong>보상금, 참전명예수당, 생활조정수당</strong>을 공정하게 지급하고 생활 안정을 보장합니다.
+          </p>
+          <div class="task-tags">
+            <span>#보상금 인상</span>
+            <span>#생계지원금</span>
+            <span>#영예수당</span>
+          </div>
+        </div>
+
+        <!-- 2. 의료 및 복지 -->
+        <div class="task-card">
+          <div class="task-header">
+            <div class="task-icon-circle bg-green">🏥</div>
+            <div>
+              <h3>사각지대 없는 보훈의료·돌봄</h3>
+              <span class="task-category">건강·의료 안전망</span>
+            </div>
+          </div>
+          <p class="task-body">
+            전국 6개 대도시 보훈병원뿐만 아니라 집 근처에서 진료를 받을 수 있도록 
+            <strong>위탁병원(동네 의원)을 수백 개 이상 확대</strong>하고 고령 유공자를 위한 치매검사비 및 요양·간병 서비스를 지원합니다.
+          </p>
+          <div class="task-tags">
+            <span>#동네 위탁병원 확대</span>
+            <span>#보훈요양원</span>
+            <span>#치매치료지원</span>
+          </div>
+        </div>
+
+        <!-- 3. 제대군인 지원 -->
+        <div class="task-card">
+          <div class="task-header">
+            <div class="task-icon-circle bg-purple">💼</div>
+            <div>
+              <h3>제대군인 전직 지원 & 청년 예우</h3>
+              <span class="task-category">사회 정착 지원</span>
+            </div>
+          </div>
+          <p class="task-body">
+            국토 방위를 위해 청춘을 바친 중·장기 및 의무복무 제대군인들이 원활하게 사회로 복귀할 수 있도록 
+            <strong>취업·창업 직업훈련, 전직지원금, 취업알선 연계</strong>를 총력 지원합니다.
+          </p>
+          <div class="task-tags">
+            <span>#제대군인지원센터</span>
+            <span>#전직지원금</span>
+            <span>#청년장병 취업</span>
+          </div>
+        </div>
+
+        <!-- 4. 보훈문화 & 국제외교 -->
+        <div class="task-card">
+          <div class="task-header">
+            <div class="task-icon-circle bg-gold">🕊️</div>
+            <div>
+              <h3>보훈문화 확산 & 글로벌 보훈외교</h3>
+              <span class="task-category">기억과 선양</span>
+            </div>
+          </div>
+          <p class="task-body">
+            국립묘지 국격 제고, 현충시설 정비, 미래세대 보훈 역사체험을 주관하며 
+            22개 6·25 참전국과의 우호협력, 상이군경 올림픽인 <strong>'인빅터스 게임(Invictus Games)'</strong> 등 글로벌 K-보훈을 이끕니다.
+          </p>
+          <div class="task-tags">
+            <span>#인빅터스게임</span>
+            <span>#현충원 현대화</span>
+            <span>#UN참전국 교류</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- [신규 기능] 국민 맞춤형 보훈 혜택 진단기 & 체크리스트 설문 -->
+  <section class="section checker-section" id="checker">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="sub-heading">INTERACTIVE BENEFIT FINDER</span>
+        <h2 class="main-heading">"나는 국가보훈부로부터 어떤 도움을 받을 수 있을까?"</h2>
+        <p class="section-intro">
+          국가유공자, 참전용사, 군 복무를 마친 청년, 또는 일반 국민이신가요?<br>
+          3가지 간단한 질문에 답하시면 <strong>나와 내 가족이 누릴 수 있는 맞춤형 보훈 혜택과 지원 사업</strong>을 즉시 찾아드립니다.
+        </p>
+      </div>
+
+      <div class="checker-card">
+        <!-- 진단 폼 단계 -->
+        <form id="benefitForm" class="checker-form">
+          <div class="form-step-indicator">
+            <div class="step-indicator-item active" data-step-indicator="1">
+              <span class="step-circle">1</span>
+              <span class="step-label">신분/자격 선택</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-indicator-item" data-step-indicator="2">
+              <span class="step-circle">2</span>
+              <span class="step-label">관심 지원 분야</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-indicator-item" data-step-indicator="3">
+              <span class="step-circle">3</span>
+              <span class="step-label">상세 상황 체크</span>
+            </div>
+          </div>
+
+          <!-- 질문 1단계: 귀하는 국가와 어떤 인연이 있으신가요? -->
+          <div class="survey-step active" id="surveyStep1">
+            <h3 class="survey-question-title">
+              <span class="q-badge">Q1</span> 귀하 또는 가족의 현재 신분(자격)을 선택해 주세요.
+            </h3>
+            <p class="survey-question-desc">가장 근접한 하나의 유형을 선택해 주세요.</p>
+            
+            <div class="options-grid">
+              <label class="option-card">
+                <input type="radio" name="targetRole" value="veteran" checked>
+                <div class="option-content">
+                  <div class="opt-icon">🎖️</div>
+                  <div class="opt-text">
+                    <h4>국가유공자 / 참전용사</h4>
+                    <p>독립·참전유공자, 상이군경, 무공수훈자 등 본인</p>
+                  </div>
+                </div>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="targetRole" value="family">
+                <div class="option-content">
+                  <div class="opt-icon">👨‍👩‍👧‍👦</div>
+                  <div class="opt-text">
+                    <h4>유공자 유족 및 보훈가족</h4>
+                    <p>순직군경 유족, 참전유공자 배우자, 독립유공자 후손(자녀·손자녀)</p>
+                  </div>
+                </div>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="targetRole" value="military">
+                <div class="option-content">
+                  <div class="opt-icon">🪖</div>
+                  <div class="opt-text">
+                    <h4>제대군인 및 복무 청년</h4>
+                    <p>중·장기 복무 제대군인 또는 군 복무를 마친 의무복무 청년</p>
+                  </div>
+                </div>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="targetRole" value="citizen">
+                <div class="option-content">
+                  <div class="opt-icon">🇰🇷</div>
+                  <div class="opt-text">
+                    <h4>일반 국민 / 청소년 / 학생</h4>
+                    <p>보훈에 관심 있는 국민 누구나, 역사 탐방 및 기부 희망자</p>
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <div class="step-nav-buttons justify-end">
+              <button type="button" class="btn btn-next" id="btnToStep2">다음 질문으로 ➔</button>
+            </div>
+          </div>
+
+          <!-- 질문 2단계: 어떤 지원에 관심이 있으신가요? -->
+          <div class="survey-step" id="surveyStep2">
+            <h3 class="survey-question-title">
+              <span class="q-badge">Q2</span> 지금 가장 도움이 필요한 분야는 무엇인가요? (복수 선택 가능)
+            </h3>
+            <p class="survey-question-desc">원하시는 지원 항목을 체크해 주세요.</p>
+
+            <div class="checkbox-grid">
+              <label class="checkbox-pill">
+                <input type="checkbox" name="interestArea" value="finance" checked>
+                <span class="pill-box">
+                  <span class="icon">💰</span> 보상금 / 생계지원금 / 수당
+                </span>
+              </label>
+
+              <label class="checkbox-pill">
+                <input type="checkbox" name="interestArea" value="medical" checked>
+                <span class="pill-box">
+                  <span class="icon">🏥</span> 병원 진료비 감면 / 요양·의료
+                </span>
+              </label>
+
+              <label class="checkbox-pill">
+                <input type="checkbox" name="interestArea" value="job">
+                <span class="pill-box">
+                  <span class="icon">💼</span> 취업·창업 지원 / 전직지원금
+                </span>
+              </label>
+
+              <label class="checkbox-pill">
+                <input type="checkbox" name="interestArea" value="edu">
+                <span class="pill-box">
+                  <span class="icon">🎓</span> 교육비(학비) 감면 / 장학금
+                </span>
+              </label>
+
+              <label class="checkbox-pill">
+                <input type="checkbox" name="interestArea" value="life">
+                <span class="pill-box">
+                  <span class="icon">🚍</span> 교통·문화시설 할인 / 모바일 신분증
+                </span>
+              </label>
+
+              <label class="checkbox-pill">
+                <input type="checkbox" name="interestArea" value="culture">
+                <span class="pill-box">
+                  <span class="icon">🕊️</span> 국립묘지 안장 / 보훈 기부 및 체험
+                </span>
+              </label>
+            </div>
+
+            <div class="step-nav-buttons">
+              <button type="button" class="btn btn-prev" id="btnBackTo1">⬅ 이전</button>
+              <button type="button" class="btn btn-next" id="btnToStep3">다음 질문으로 ➔</button>
+            </div>
+          </div>
+
+          <!-- 질문 3단계: 추가 상황 체크 -->
+          <div class="survey-step" id="surveyStep3">
+            <h3 class="survey-question-title">
+              <span class="q-badge">Q3</span> 해당되는 추가 상황이 있으신가요?
+            </h3>
+            <p class="survey-question-desc">체크 시 더욱 정밀한 2026년 최신 신설 제도를 함께 매칭해 드립니다.</p>
+
+            <div class="conditions-list">
+              <label class="condition-item">
+                <input type="checkbox" name="extraCondition" value="lowIncome">
+                <div class="cond-text">
+                  <strong>기초생활수급 또는 중위소득 이하 저소득 가구</strong>
+                  <span>생활조정수당 및 참전유공자 배우자 생계지원금(월 15만원) 대상 여부 판단</span>
+                </div>
+              </label>
+
+              <label class="condition-item">
+                <input type="checkbox" name="extraCondition" value="localArea">
+                <div class="cond-text">
+                  <strong>강원도 또는 제주도 등 지방 거주</strong>
+                  <span>2026년 신설 준보훈병원 및 인근 동네 위탁병원 진료망 안내</span>
+                </div>
+              </label>
+
+              <label class="condition-item">
+                <input type="checkbox" name="extraCondition" value="ageOver80">
+                <div class="cond-text">
+                  <strong>만 80세 이상 고령자 또는 거동 불편 어르신</strong>
+                  <span>보훈재가복지서비스(가정방문 도우미), 치매검사비 지원 및 위탁병원 90% 감면</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="step-nav-buttons">
+              <button type="button" class="btn btn-prev" id="btnBackTo2">⬅ 이전</button>
+              <button type="submit" class="btn btn-submit" id="btnShowResult">🎯 내 맞춤 혜택 진단 결과 보기</button>
+            </div>
+          </div>
+        </form>
+
+        <!-- 진단 결과 영역 (초기 숨김) -->
+        <div id="surveyResult" class="survey-result-container" style="display: none;">
+          <div class="result-header">
+            <div class="result-badge">분석 완료</div>
+            <h3 class="result-title" id="resultTargetTitle">국가유공자님을 위한 맞춤형 보훈 혜택</h3>
+            <p class="result-subtitle">국가보훈부에서 지원받으실 수 있는 핵심 권리와 지원 사업 목록입니다.</p>
+          </div>
+
+          <div class="result-cards-grid" id="resultCardsGrid">
+            <!-- JS 동적 생성 결과 카드 삽입 -->
+          </div>
+
+          <div class="result-footer-box">
+            <div class="footer-callout">
+              <span class="callout-icon">💡</span>
+              <div class="callout-txt">
+                <strong>정확한 보훈번호별 상세 혜택을 원하시나요?</strong>
+                <p>국가보훈부 <strong>'나만의 예우'</strong> 포털에서 본인인증 후 개인별 수당 액수 및 감면 자격을 1초 만에 확인하실 수 있습니다.</p>
+              </div>
+            </div>
+            <div class="footer-actions">
+              <button type="button" class="btn btn-secondary" id="btnRestartSurvey">↺ 다시 진단하기</button>
+              <a href="https://pmp.mpva.go.kr" target="_blank" rel="noopener noreferrer" class="btn btn-primary">국가보훈부 '나만의 예우' 바로가기 ↗</a>
+              <a href="https://donate.bohun.or.kr" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark" id="btnDonateShortcut" style="display: none;">'모두의 보훈 드림' 기부 참여 ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 정책 동향 및 혁신 방향 -->
+  <section class="section trends-section" id="trends">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="sub-heading">POLICY TRENDS 2026</span>
+        <h2 class="main-heading">지금 보훈부는 이렇게 달라지고 있습니다</h2>
+        <p class="section-intro">국민의 목소리를 반영하여 더욱 똑똑하고 따뜻하게 진화하는 최신 보훈 행정 트렌드</p>
+      </div>
+
+      <div class="trend-tabs-wrapper">
+        <div class="trend-tab-buttons" role="tablist">
+          <button class="trend-tab-btn active" data-tab="trend-1">1. 정부가 '먼저 찾아가는 보훈'</button>
+          <button class="trend-tab-btn" data-tab="trend-2">2. 생활 밀착형 보상금 체계</button>
+          <button class="trend-tab-btn" data-tab="trend-3">3. 강원·제주 준보훈병원 도입</button>
+          <button class="trend-tab-btn" data-tab="trend-4">4. 디지털 보훈 행정 혁신</button>
+        </div>
+
+        <div class="trend-tab-content">
+          <!-- 탭 1 -->
+          <div class="tab-pane active" id="trend-1">
+            <div class="pane-content">
+              <div class="pane-text">
+                <span class="badge-accent">패러다임의 혁신</span>
+                <h3>"신청주의에서 정부 능동 발굴로 대전환"</h3>
+                <p>
+                  과거에는 유공자가 스스로 서류를 준비해 신청해야 혜택을 받을 수 있었으나, 정보가 어두워 지원을 놓치는 일이 빈번했습니다. 
+                  보훈부는 행정 데이터를 선제적으로 연계해 <strong>숨은 국가유공자와 전몰군경 유가족을 정부가 직접 발굴하여 예우</strong>하는 적극 행정을 정착시켰습니다.
+                </p>
+                <div class="highlight-quote">
+                  "단 한 분의 영웅도 소외되지 않도록, 국가가 마지막 한 걸음까지 먼저 찾아갑니다."
+                </div>
+              </div>
+              <div class="pane-visual">
+                <div class="step-flow">
+                  <div class="flow-step">
+                    <span class="step-num">01</span>
+                    <span class="step-txt">데이터 기반 대상자 발굴</span>
+                  </div>
+                  <div class="flow-arrow">➔</div>
+                  <div class="flow-step">
+                    <span class="step-num">02</span>
+                    <span class="step-txt">현장 방문 및 직권 조사</span>
+                  </div>
+                  <div class="flow-arrow">➔</div>
+                  <div class="flow-step">
+                    <span class="step-num">03</span>
+                    <span class="step-txt">원스톱 보훈 등록 & 수당 지급</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 탭 2 -->
+          <div class="tab-pane" id="trend-2">
+            <div class="pane-content">
+              <div class="pane-text">
+                <span class="badge-accent">복지 혜택 강화</span>
+                <h3>"저소득 참전유공자 배우자 생계지원 신설"</h3>
+                <p>
+                  유공자 본인뿐만 아니라 오랜 시간 헌신을 뒷바라지해 온 배우자에 대한 돌봄을 대폭 확대했습니다.
+                  생존 애국지사 특별예우금을 두 배 수준으로 파격 인상하고, 보상금 5% 인상 및 80세 이상 저소득 참전유공자 생계지원금을 월 15만 원으로 올렸습니다.
+                </p>
+                <ul class="check-list">
+                  <li><strong>생존 애국지사 예우금:</strong> 월 157~172만 원 ➔ 최대 345만 원으로 대폭 상향</li>
+                  <li><strong>참전유공자 배우자:</strong> 생계지원금 월 15만 원 신설</li>
+                  <li><strong>국가유공자 기본 보상금:</strong> 연 5% 수준 정기 인상</li>
+                </ul>
+              </div>
+              <div class="pane-visual info-box">
+                <h4>📊 보훈예산 체감 지수</h4>
+                <div class="progress-item">
+                  <div class="pr-label"><span>보상금 실질 인상률</span><span>5.0% ↑</span></div>
+                  <div class="pr-bar"><div class="pr-fill" style="width: 85%"></div></div>
+                </div>
+                <div class="progress-item">
+                  <div class="pr-label"><span>위탁병원 이용 편의도</span><span>92% 만족</span></div>
+                  <div class="pr-bar"><div class="pr-fill" style="width: 92%"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 탭 3 -->
+          <div class="tab-pane" id="trend-3">
+            <div class="pane-content">
+              <div class="pane-text">
+                <span class="badge-accent">의료 불평등 해소</span>
+                <h3>"보훈병원이 없던 강원·제주에 '준보훈병원' 도입"</h3>
+                <p>
+                  그동안 서울, 부산, 대구, 대전, 광주, 인천 등 대도시 중심으로 운영되던 중앙보훈병원망의 사각지대였던 
+                  <strong>강원권 및 제주권 지역</strong>에 공공 종합병원을 준보훈병원으로 지정하여 고령 국가유공자들이 장거리 이동 없이 최첨단 전문 진료를 받을 수 있습니다.
+                </p>
+                <div class="highlight-quote">
+                  "사는 곳이 어디든 차별 없는 수준 높은 국가 진료를 누릴 권리가 있습니다."
+                </div>
+              </div>
+              <div class="pane-visual">
+                <div class="region-map-preview">
+                  <div class="reg-pill">강원도 준보훈 거점 연계</div>
+                  <div class="reg-pill">제주도 특화 보훈의료망 확충</div>
+                  <div class="reg-pill">전국 900+개 위탁 지정의원</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 탭 4 -->
+          <div class="tab-pane" id="trend-4">
+            <div class="pane-content">
+              <div class="pane-text">
+                <span class="badge-accent">디지털 편의 혁신</span>
+                <h3>"서류 방문 없는 모바일 국가유공자증 & 간편증명"</h3>
+                <p>
+                  지갑 속에 소지하던 실물 국가유공자증을 스마트폰 속 '모바일 신분증'으로 간편 등록하여 공공시설 무료 이용, 
+                  국내선 항공·철도 할인 등을 QR코드 하나로 편리하게 인증받을 수 있도록 디지털 보훈 인프라를 전면 개편했습니다.
+                </p>
+                <ul class="check-list">
+                  <li>스마트폰 모바일 국가유공자증 전국 발급 및 범용 호환</li>
+                  <li>장례 편의를 위한 공설화장시설 감면 증명서 정부24 온라인 즉시 연계</li>
+                  <li>보훈 민원 챗봇 및 비대면 서류 제출 시스템 도입</li>
+                </ul>
+              </div>
+              <div class="pane-visual info-box">
+                <h4>📱 모바일 국가유공자증 특징</h4>
+                <p class="small-text">블록체인 분산신원증명(DID) 기술을 적용하여 위·변조 걱정 없이 전국 공공기관, 금융기관, 문화시설에서 동일한 신분 효력을 인정받습니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 실시간 최신 뉴스 및 언론 보도 섹션 -->
+  <section class="section news-section" id="news">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="header-split">
+          <div>
+            <span class="sub-heading">LATEST MPVA NEWS</span>
+            <h2 class="main-heading">국가보훈부 최신 정책 & 뉴스</h2>
+            <p class="section-intro">언론 보도와 공식 보도자료를 통해 보훈부의 가장 최신 소식을 확인하세요.</p>
+          </div>
+          <div class="news-filter-buttons">
+            <button class="filter-btn active" data-filter="all">전체보기</button>
+            <button class="filter-btn" data-filter="policy">정책/예우</button>
+            <button class="filter-btn" data-filter="culture">문화/외교</button>
+            <button class="filter-btn" data-filter="official">공식발표</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="news-grid" id="newsGrid">
+        <!-- 뉴스 카드 1 -->
+        <article class="news-card" data-category="policy">
+          <div class="news-thumbnail">
+            <span class="news-badge badge-blue">정책 예우</span>
+            <div class="news-thumb-decor">🇰🇷</div>
+          </div>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-source">대한민국 정책브리핑</span>
+              <span class="news-date">2026. 09. 12</span>
+            </div>
+            <h3 class="news-title">
+              <a href="https://www.korea.kr" target="_blank" rel="noopener noreferrer">
+                국가유공자 보상금 5% 인상 및 참전유공자 배우자 생계지원금 신설
+              </a>
+            </h3>
+            <p class="news-summary">
+              생존 애국지사 특별예우금을 두 배 수준으로 상향하고, 저소득 참전유공자 배우자를 위한 월 15만 원의 생계지원금이 신설되어 사각지대 없는 복지망이 구축됩니다.
+            </p>
+            <a href="https://www.korea.kr" target="_blank" rel="noopener noreferrer" class="read-more-link">
+              기사 원문 보기 <span class="arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 뉴스 카드 2 -->
+        <article class="news-card" data-category="culture">
+          <div class="news-thumbnail">
+            <span class="news-badge badge-gold">국제보훈</span>
+            <div class="news-thumb-decor">🕊️</div>
+          </div>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-source">국가보훈부 공식 보도</span>
+              <span class="news-date">2026. 08. 28</span>
+            </div>
+            <h3 class="news-title">
+              <a href="https://www.mpva.go.kr" target="_blank" rel="noopener noreferrer">
+                아시아 최초 세계 상이군경 체육대회 '인빅터스 게임' 한국 개최 박차
+              </a>
+            </h3>
+            <p class="news-summary">
+              국가를 위해 헌신한 부상 군인들의 재활과 불굴의 용기를 기리는 세계적 상이군경 체육대회 인빅터스 게임을 아시아 최초로 유치하여 K-보훈의 국제 위상을 높입니다.
+            </p>
+            <a href="https://www.mpva.go.kr" target="_blank" rel="noopener noreferrer" class="read-more-link">
+              기사 원문 보기 <span class="arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 뉴스 카드 3 -->
+        <article class="news-card" data-category="policy">
+          <div class="news-thumbnail">
+            <span class="news-badge badge-blue">의료복지</span>
+            <div class="news-thumb-decor">🏥</div>
+          </div>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-source">연합뉴스 TV</span>
+              <span class="news-date">2026. 07. 19</span>
+            </div>
+            <h3 class="news-title">
+              <a href="https://www.yonhapnewstv.co.kr" target="_blank" rel="noopener noreferrer">
+                강원·제주권 준보훈병원 지정 추진… 위탁병원 의원급 대폭 확대
+              </a>
+            </h3>
+            <p class="news-summary">
+              대도시 보훈병원 방문이 어려운 지방 거주 국가유공자를 위해 접근성이 뛰어난 의원급 위탁병원을 대폭 늘리고 치매 등 만성질환 검사비 지원을 강화합니다.
+            </p>
+            <a href="https://www.yonhapnewstv.co.kr" target="_blank" rel="noopener noreferrer" class="read-more-link">
+              기사 원문 보기 <span class="arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 뉴스 카드 4 -->
+        <article class="news-card" data-category="official">
+          <div class="news-thumbnail">
+            <span class="news-badge badge-gray">보훈 행정</span>
+            <div class="news-thumb-decor">🏛️</div>
+          </div>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-source">국가보훈부 보도자료실</span>
+              <span class="news-date">2026. 06. 05</span>
+            </div>
+            <h3 class="news-title">
+              <a href="https://www.mpva.go.kr/mpva/communication/pressReleaseList.do" target="_blank" rel="noopener noreferrer">
+                국가보훈부 출범 주년 기념… '정부가 먼저 찾아가는 보훈' 7대 역점과제 발표
+              </a>
+            </h3>
+            <p class="news-summary">
+              부 승격 이후 현장 체감형 정책 성과를 공유하며 독립·호국·민주를 잇는 국민통합 보훈문화 공간 조성과 제대군인 미래 지원을 위한 7대 과제를 본격 가동합니다.
+            </p>
+            <a href="https://www.mpva.go.kr/mpva/communication/pressReleaseList.do" target="_blank" rel="noopener noreferrer" class="read-more-link">
+              기사 원문 보기 <span class="arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 뉴스 카드 5 -->
+        <article class="news-card" data-category="culture">
+          <div class="news-thumbnail">
+            <span class="news-badge badge-gold">선양 예우</span>
+            <div class="news-thumb-decor">🎖️</div>
+          </div>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-source">중앙일보 / 보훈 종합</span>
+              <span class="news-date">2026. 05. 21</span>
+            </div>
+            <h3 class="news-title">
+              <a href="https://www.joongang.co.kr" target="_blank" rel="noopener noreferrer">
+                화재 현장 순직 소방영웅 국립묘지 안장… 유통·민간 기업과 보훈 협약 확산
+              </a>
+            </h3>
+            <p class="news-summary">
+              재난 현장에서 목숨을 바친 영웅들을 국립현충원에 영면하도록 예우하고, 민간 기업들과 협력하여 일상 속 보훈문화 캠페인을 사회 전반으로 확산합니다.
+            </p>
+            <a href="https://www.joongang.co.kr" target="_blank" rel="noopener noreferrer" class="read-more-link">
+              기사 원문 보기 <span class="arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 뉴스 카드 6 -->
+        <article class="news-card" data-category="official">
+          <div class="news-thumbnail">
+            <span class="news-badge badge-gray">포털 연계</span>
+            <div class="news-thumb-decor">📰</div>
+          </div>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-source">네이버 뉴스 토픽</span>
+              <span class="news-date">실시간 연동</span>
+            </div>
+            <h3 class="news-title">
+              <a href="https://search.naver.com/search.naver?where=news&query=%EA%B5%AD%EA%B0%80%EB%B3%B4%ED%9B%88%EB%B6%80" target="_blank" rel="noopener noreferrer">
+                네이버 뉴스 '국가보훈부' 실시간 언론 보도 종합 바로가기
+              </a>
+            </h3>
+            <p class="news-summary">
+              주요 방송사 및 신문사에서 실시간으로 취재·보도하는 국가보훈부의 국정감사, 정책 입법, 지역 보훈지청의 생생한 활동 뉴스를 실시간으로 검색해 확인하실 수 있습니다.
+            </p>
+            <a href="https://search.naver.com/search.naver?where=news&query=%EA%B5%AD%EA%B0%80%EB%B3%B4%ED%9B%88%EB%B6%80" target="_blank" rel="noopener noreferrer" class="read-more-link">
+              실시간 뉴스 검색 <span class="arrow">→</span>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <!-- 뉴스 바로가기 배너 -->
+      <div class="news-external-banner">
+        <div class="banner-text">
+          <h4>더 많은 정부 보훈 보도자료 원문이 필요하신가요?</h4>
+          <p>대한민국 정책포털과 국가보훈부 대표 누리집에서 정책 원문과 카드뉴스를 제공합니다.</p>
+        </div>
+        <div class="banner-actions">
+          <a href="https://www.korea.kr" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">정책브리핑 바로가기</a>
+          <a href="https://www.mpva.go.kr/mpva/communication/pressReleaseList.do" target="_blank" rel="noopener noreferrer" class="btn btn-white">보훈부 보도자료실</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 국민 눈높이 Q&A 아코디언 섹션 -->
+  <section class="section faq-section" id="faq">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="sub-heading">FAQ FOR CITIZENS</span>
+        <h2 class="main-heading">자주 묻는 질문으로 쉽게 이해하는 보훈</h2>
+        <p class="section-intro">국민 여러분이 가장 궁금해하시는 보훈 상식과 지원 제도에 대해 명쾌하게 답해드립니다.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Q1. 국가보훈처가 '국가보훈부'로 승격된 후 무엇이 가장 달라졌나요?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              가장 큰 변화는 국가유공자에 대한 <strong>사회적 위상과 정책 결정력의 강화</strong>입니다.
+              기존 처장 시절과 달리 보훈부 장관은 국무회의에서 법률안 제정 및 국무위원 의결권을 행사할 수 있으며,
+              군인·경찰·소방관 등 국가를 위해 헌신한 모든 제복 영웅들에 대한 예우 수준을 타 부처와 대등하게 이끌어갈 수 있게 되었습니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Q2. 집 근처 병원에서도 국가유공자 감면 진료를 받을 수 있나요?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              네, 가능합니다! 거주지 근처에서 진료를 받으실 수 있도록 전국 수백 개 병의원을 <strong>'보훈 위탁병원'</strong>으로 지정하여 운영 중입니다. 
+              상이유공자는 물론 참전유공자, 고엽제휴유의증 대상자 등 자격 요건에 따라 국비 또는 30~90% 감면 혜택을 가까운 동네 의원에서 그대로 적용받으실 수 있습니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Q3. 제대군인에게는 어떤 구체적인 지원 프로그램이 있나요?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              전국 10개 <strong>제대군인지원센터(Vnet)</strong>를 통해 1:1 맞춤형 진로상담, 직업교육훈련비 지원(최대 150만 원 상당), 
+              기업 연계 취업 알선 및 전직지원금(복무기간에 따라 일정 기간 매월 지급)을 지원하고 있습니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Q4. 일반 국민이나 청소년도 참여할 수 있는 보훈 활동이 있나요?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              매년 6월 ‘호국보훈의 달’ 행사, 국립묘지 현충탑 참배 및 봉사활동, 독립기념관 역사 캠프, 서해수호의 날 기념행사, 
+              보훈문화 서포터즈 활동 등 온 가족과 청소년이 참여할 수 있는 체험형 프로그램이 연중 열리고 있습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 대민 서비스 & 빠른 링크 섹션 -->
+  <section class="section services-section" id="services">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="sub-heading">QUICK ACCESS</span>
+        <h2 class="main-heading">국가보훈부 주요 포털 바로가기</h2>
+        <p class="section-intro">클릭 한 번으로 원하시는 보훈 행정 및 복지 서비스로 바로 이동하실 수 있습니다.</p>
+      </div>
+
+      <div class="service-links-grid">
+        <a href="https://www.mpva.go.kr" target="_blank" rel="noopener noreferrer" class="service-box">
+          <span class="service-icon">🌐</span>
+          <h4>국가보훈부 공식 누리집</h4>
+          <p>대표 포털 공지사항 및 정책 확인</p>
+          <span class="box-arrow">열기 ↗</span>
+        </a>
+
+        <a href="https://pmp.mpva.go.kr" target="_blank" rel="noopener noreferrer" class="service-box">
+          <span class="service-icon">🎖️</span>
+          <h4>나만의 예우 (맞춤 혜택 포털)</h4>
+          <p>개인별 보훈자격 조회 및 수당 확인</p>
+          <span class="box-arrow">열기 ↗</span>
+        </a>
+
+        <a href="https://donate.bohun.or.kr" target="_blank" rel="noopener noreferrer" class="service-box">
+          <span class="service-icon">❤️</span>
+          <h4>모두의 보훈 드림 (기부 포털)</h4>
+          <p>국민 누구나 참여하는 일상 속 보훈 후원</p>
+          <span class="box-arrow">열기 ↗</span>
+        </a>
+
+        <a href="https://www.vnet.go.kr" target="_blank" rel="noopener noreferrer" class="service-box">
+          <span class="service-icon">💼</span>
+          <h4>제대군인지원센터 (Vnet)</h4>
+          <p>전직 지원, 구인정보 및 교육 신청</p>
+          <span class="box-arrow">열기 ↗</span>
+        </a>
+
+        <a href="https://www.korea.kr" target="_blank" rel="noopener noreferrer" class="service-box">
+          <span class="service-icon">📰</span>
+          <h4>대한민국 정책브리핑</h4>
+          <p>보훈부 정부 공식 발표 보도자료실</p>
+          <span class="box-arrow">열기 ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <svg class="gok-symbol-svg-footer" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 8C65 8 82 18 88 32C94 46 89 62 78 72C66 60 62 48 57 39C50 28 38 21 24 22C31 13 40 8 50 8Z" fill="#E4032E"/>
+              <path d="M50 92C35 92 18 82 12 68C6 54 11 38 22 28C34 40 38 52 43 61C50 72 62 79 76 78C69 87 60 92 50 92Z" fill="#003764"/>
+              <circle cx="50" cy="50" r="9" fill="#FFFFFF"/>
+            </svg>
+            <div class="brand-text white">
+              <span class="kr-title">대한민국 <strong>국가보훈부</strong> 디지털 홍보관</span>
+              <p>국가를 위한 헌신을 잊지 않고, 끝까지 보답하는 품격 있는 대한민국</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <div class="call-badge">
+            <span class="call-label">보훈상담센터 콜센터</span>
+            <span class="call-number">☎ 1577-0606</span>
+          </div>
+          <p class="service-time">평일 09:00 ~ 18:00 (토·일, 공휴일 휴무)</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copy">
+          본 웹 애플리케이션은 국가보훈부의 주요 업무와 정책 동향을 국민 누구나 쉽게 열람할 수 있도록 제작된 단일 실행형 웹 앱입니다.
+        </p>
+        <p class="copy-sub">
+          © 2026 Ministry of Patriots and Veterans Affairs. All official information originates from mpva.go.kr and korea.kr.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
